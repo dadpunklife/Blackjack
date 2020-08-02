@@ -7,18 +7,32 @@ class Deck:
     possible_suits = [ 'Hearts', 'Diamonds', 'Clubs', 'Spades' ]
 
     cards = []
+    dealt = []
 
     # initalize deck of 52 standard playing cards
     def __init__(self):
         for value in self.possible_values:
             for suit in self.possible_suits:
                 self.cards.append(Card(value, suit))
-        print("cards created: " + str(len(self.cards)))
 
     # shuffle the deck of cards
     def shuffle(self):
         random.shuffle(self.cards)
 
+    # deal x number of cards from the deck and place them into the dealt pile for consistency
+    def deal(self, number_of_cards):
+        dealt_cards = []
+        counter = range(number_of_cards)
+        for instance in counter:
+            card = self.cards.pop()
+            dealt_cards.append(card)
+        self.dealt.append(dealt_cards)
+        return dealt_cards
+
+    # return dealt cards to deck and reshuffle it
+    def reshuffle(self):
+        self.cards = self.cards + self.dealt
+        self.shuffle()
 
 
 
