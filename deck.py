@@ -1,3 +1,5 @@
+from random import Random
+
 # A class which represents a deck of 52 standard playing cards
 class Deck:
 
@@ -6,11 +8,17 @@ class Deck:
 
     cards = []
 
+    # initalize deck of 52 standard playing cards
     def __init__(self):
         for value in self.possible_values:
             for suit in self.possible_suits:
                 self.cards.append(Card(value, suit))
         print("cards created: " + str(len(self.cards)))
+
+    # shuffle the deck of cards
+    def shuffle():
+        random.shuffle(cards)
+
 
 
 
