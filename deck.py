@@ -1,4 +1,4 @@
-from random import Random
+import random
 
 # A class which represents a deck of 52 standard playing cards
 class Deck:
@@ -16,8 +16,8 @@ class Deck:
         print("cards created: " + str(len(self.cards)))
 
     # shuffle the deck of cards
-    def shuffle():
-        random.shuffle(cards)
+    def shuffle(self):
+        random.shuffle(self.cards)
 
 
 
