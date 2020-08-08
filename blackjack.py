@@ -33,10 +33,6 @@ def dealerTurn(playerHand, dealerHand):
             return False
     return True
 
-    #Delaer hit if they have 
-
-
-
 # execution...
 
 print()
@@ -99,7 +95,6 @@ while isGame:
                 isBusted = True
                 #Do you want to play again?
 
-
         elif choice == '2' or choice.lower() == 'stay':
             isChoiceStay = True
 
@@ -153,7 +148,6 @@ while isGame:
     playDeck.reshuffle()
     isChoiceStay = False
     isBusted = False
-
 
     print('Do you want to play again?')
     choice = input()

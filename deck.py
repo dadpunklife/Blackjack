@@ -26,15 +26,15 @@ class Deck:
         for instance in counter:
             card = self.cards.pop()
             dealt_cards.append(card)
-        self.dealt.append(dealt_cards)
+        self.dealt += dealt_cards
         return dealt_cards
 
     # return dealt cards to deck and reshuffle it
     def reshuffle(self):
-        self.cards = self.cards + self.dealt
+        self.cards += self.dealt
+        self.dealt = []
         self.shuffle()
-
-
+        
 
 # A clas which represents a single card in a deck of standard playing cards
 class Card:
